@@ -1,0 +1,49 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:batch="http://www.springframework.org/schema/batch" xmlns:task="http://www.springframework.org/schema/task"
+	xmlns:util="http://www.springframework.org/schema/util" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/batch
+	http://www.springframework.org/schema/batch/spring-batch-2.2.xsd
+	http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+	http://www.springframework.org/schema/util 
+	http://www.springframework.org/schema/util/spring-util-3.2.xsd
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+
+	<import resource="context.xml" />
+	<context:component-scan base-package="com"/>
+
+
+	<batch:job id="siteSpeedBatchJob">
+			<batch:step id="readSiteSpeed">
+				<batch:tasklet	>
+					<batch:chunk reader="ExcelFileItemReader" writer="cassandraWriter" commit-interval="2">
+					</batch:chunk>
+				</batch:tasklet>
+			</batch:step>
+	</batch:job>
+	
+	<bean id="rawSpeedData" class="com.batchjobs.entity.RawSpeedData" scope="prototype" />
+
+
+
+   <bean id="cassandraWriter" class="com.batchjobs.writer.SiteSpeedWriter"/>
+
+	<bean id="ExcelFileItemReader" class="com.batchjobs.reader.ExcelFileItemReader">
+	    <property name="resourcePath" value="C:/JCP_Support/" />
+	    <property name="fileNamePattern" value="DOTCOM Daily Status RUM Report_"/>
+	    <property name="fileExtension" value=".xls"/>
+    	<property name="rowsToSkip" value="4"/>
+    	<property name="headerRow" value="3"/>
+    	<property name="lastRow" value="17"/>
+    	<property name="columnsToRead">
+    		<list>
+	    		<value>0</value>
+	    		<value>9</value>
+    		</list>
+    	</property>
+    	<property name="sheetNumber" value="8"/>
+	</bean>
+	
+</beans>

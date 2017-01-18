@@ -1,0 +1,12 @@
+
+/* Key Space for SiteSpeed */ 
+CREATE KEYSPACE selfhelp WITH REPLICATION = { 'class' : 'SimpleStrategy', 'replication_factor' : 1 };
+
+
+/* Table for SiteSpeed */
+CREATE TABLE IF NOT EXISTS selfhelp.SITE_SPEED (
+id text,
+page_name text,
+date text,
+speed double,
+PRIMARY KEY (ID));

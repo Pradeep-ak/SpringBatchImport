@@ -1,0 +1,7 @@
+C:\Users\nshukla\Downloads\spring-batch-examples-master\spring-batch-examples-master\spring\src\main\java\com\util\Util.java
+C:\Users\nshukla\Downloads\spring-batch-examples-master\spring-batch-examples-master\spring\src\main\java\com\batchjobs\config\CassandraConfig.java
+C:\Users\nshukla\Downloads\spring-batch-examples-master\spring-batch-examples-master\spring\src\main\java\com\batchjobs\writer\SiteSpeedWriter.java
+C:\Users\nshukla\Downloads\spring-batch-examples-master\spring-batch-examples-master\spring\src\main\java\com\batchjobs\entity\RawSpeedData.java
+C:\Users\nshukla\Downloads\spring-batch-examples-master\spring-batch-examples-master\spring\src\main\java\com\batchjobs\SiteSpeedExecutor.java
+C:\Users\nshukla\Downloads\spring-batch-examples-master\spring-batch-examples-master\spring\src\main\java\com\batchjobs\repository\SiteSpeedRepository.java
+C:\Users\nshukla\Downloads\spring-batch-examples-master\spring-batch-examples-master\spring\src\main\java\com\batchjobs\reader\ExcelFileItemReader.java

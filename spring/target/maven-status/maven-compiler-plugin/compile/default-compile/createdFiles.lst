@@ -1,0 +1,7 @@
+com\batchjobs\config\CassandraConfig.class
+com\batchjobs\repository\SiteSpeedRepository.class
+com\batchjobs\reader\ExcelFileItemReader.class
+com\batchjobs\writer\SiteSpeedWriter.class
+com\util\Util.class
+com\batchjobs\entity\RawSpeedData.class
+com\batchjobs\SiteSpeedExecutor.class

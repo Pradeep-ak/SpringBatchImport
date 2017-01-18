@@ -1,0 +1,7 @@
+com.batchjobs
+com.batchjobs.config
+com.batchjobs.entity
+com.batchjobs.reader
+com.batchjobs.repository
+com.batchjobs.writer
+com.util
